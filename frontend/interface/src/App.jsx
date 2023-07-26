@@ -1,17 +1,20 @@
 import React from 'react'
+import {BrowserRouter , Routes , Route} from 'react-router-dom'
 import { useState } from 'react'
 import './App.css'
+import Header from './components/Header'
+import HomeScreen from './components/screens/HomeScreen'
 
 function App() {
  
 
   return (
-    <div>
-    <h1 className="text-3xl font-bold underline">
-      Hello world!
-    </h1>
-      <h1>Opti lands</h1>
-    </div>
+<BrowserRouter>
+<Header />
+<Routes>
+<Route exact path='/' element={<HomeScreen/>} />
+</Routes>
+</BrowserRouter>
   )
 }
 
